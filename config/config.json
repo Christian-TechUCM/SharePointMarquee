@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "marquee-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/marquee/MarqueeWebPart.js",
+          "manifest": "./src/webparts/marquee/MarqueeWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "MarqueeWebPartStrings": "lib/webparts/marquee/loc/{locale}.js"
+  }
+}
