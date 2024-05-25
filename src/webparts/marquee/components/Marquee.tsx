@@ -16,7 +16,7 @@ export default class MarqueeComponent extends React.Component<IMarqueeProps, IMa
     this.state = {
       items: [],
       fields: [],
-      message: this.props.customMessage || 'Edit WebPart to add custom message',
+      message: this.props.customMessage || 'Edit webpart to show custom message',
     };
   }
 
@@ -75,9 +75,11 @@ export default class MarqueeComponent extends React.Component<IMarqueeProps, IMa
       ...items.map((item, index) => (
         <div key={index} className={styles.marqueeItem}>
           {fields.map((field, idx) => (
-            <p key={idx}>
-              {showFieldLabels && <strong>{field.title}:</strong>} {item[field.internalName]}
-            </p>
+            item[field.internalName] && (
+              <p key={idx}>
+                {showFieldLabels && <strong>{field.title}:</strong>} {item[field.internalName]}
+              </p>
+            )
           ))}
         </div>
       ))
