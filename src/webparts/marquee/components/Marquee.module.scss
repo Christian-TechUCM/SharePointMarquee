@@ -5,6 +5,7 @@
   padding: 1em;
   color: "[theme:bodyText, default: #323130]";
   color: var(--bodyText);
+  
   &.teams {
     font-family: $ms-font-family-fallbacks;
   }
@@ -37,9 +38,10 @@
   display: inline-block; /* Ensure items are displayed inline */
   padding: 0.5em;
   white-space: nowrap; /* Prevent items from wrapping to the next line */
+  background: rgba(197, 197, 197, 0.3); /* Subtle gray background */
 }
 
 .marqueeItem p {
   display: inline; /* Ensure text is displayed inline */
-  margin-right: 1em; /* Add some space between fields */
+  margin-right: 0.5em; /* Add some space between fields */
 }

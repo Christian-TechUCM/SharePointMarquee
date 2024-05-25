@@ -16,7 +16,7 @@ export default class MarqueeComponent extends React.Component<IMarqueeProps, IMa
     this.state = {
       items: [],
       fields: [],
-      message: this.props.customMessage || 'Celebrating Employee Anniversaries!',
+      message: this.props.customMessage || 'Edit WebPart to add custom message',
     };
   }
 
@@ -35,7 +35,7 @@ export default class MarqueeComponent extends React.Component<IMarqueeProps, IMa
     this.props.spHttpClient.get(fieldsUrl, SPHttpClient.configurations.v1)
       .then((response: SPHttpClientResponse) => response.json())
       .then((data: any) => {
-        const systemFields = ["ID", "ContentType", "Modified", "Created", "Author", "Editor", "Attachments", "ContentTypeId","Title"];
+        const systemFields = ["ID", "ContentType", "Modified", "Created", "Author", "Editor", "Attachments", "ContentTypeId", "Title"];
         const fields = data.value
           .filter((field: any) => !systemFields.includes(field.InternalName))
           .map((field: any) => ({ title: field.Title, internalName: field.InternalName }));
@@ -85,7 +85,7 @@ export default class MarqueeComponent extends React.Component<IMarqueeProps, IMa
 
     return (
       <section className={styles.marquee}>
-        <Marquee pauseOnHover={true} delay={2}>
+        <Marquee pauseOnHover={true} delay={2} gradient={true} gradientColor="white" gradientWidth={10}>
           {content}
         </Marquee>
       </section>
