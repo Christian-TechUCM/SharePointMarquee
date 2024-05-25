@@ -8,8 +8,12 @@ export interface IMarqueeProps {
   showFieldLabels: boolean;
   siteUrl: string;
   spHttpClient: SPHttpClient;
+  showCustomMessage: boolean;
+  headerColor: string;
+  customMessageColor: string; // Add this line
+  customMessageBold: boolean; // Add this line
   isDarkTheme?: boolean;
   environmentMessage?: string;
   hasTeamsContext?: boolean;
-  userDisplayName?: string; // Add this line if needed
+  userDisplayName?: string;
 }

@@ -31,7 +31,6 @@ export default class MarqueeComponent extends React.Component<IMarqueeProps, IMa
     const listUrl = `${this.props.siteUrl}/_api/web/lists(guid'${this.props.selectedList}')/items?$select=*`;
     const fieldsUrl = `${this.props.siteUrl}/_api/web/lists(guid'${this.props.selectedList}')/fields?$filter=Hidden eq false and ReadOnlyField eq false`;
 
-    // Fetch list fields
     this.props.spHttpClient.get(fieldsUrl, SPHttpClient.configurations.v1)
       .then((response: SPHttpClientResponse) => response.json())
       .then((data: any) => {
@@ -42,7 +41,6 @@ export default class MarqueeComponent extends React.Component<IMarqueeProps, IMa
         console.log('Fields:', fields);
         this.setState({ fields });
 
-        // Fetch list items
         return this.props.spHttpClient.get(listUrl, SPHttpClient.configurations.v1)
           .then((response: SPHttpClientResponse) => response.json())
           .then((data: any) => {
@@ -66,18 +64,25 @@ export default class MarqueeComponent extends React.Component<IMarqueeProps, IMa
 
   public render(): React.ReactElement<IMarqueeProps> {
     const { fields, items, message } = this.state;
-    const { showFieldLabels } = this.props;
+    const { showFieldLabels, showCustomMessage, headerColor, customMessageColor, customMessageBold } = this.props;
+
+    const customMessageStyle = {
+      color: customMessageColor,
+      fontWeight: customMessageBold ? 'bold' : 'normal'
+    };
 
     const content = [
-      <div key="message" className={styles.marqueeItem}>
-        <p>{message}</p>
-      </div>,
+      showCustomMessage && (
+        <div key="message" className={styles.marqueeItem}>
+          <p style={customMessageStyle}>{message}</p>
+        </div>
+      ),
       ...items.map((item, index) => (
         <div key={index} className={styles.marqueeItem}>
           {fields.map((field, idx) => (
             item[field.internalName] && (
               <p key={idx}>
-                {showFieldLabels && <strong>{field.title}:</strong>} {item[field.internalName]}
+                {showFieldLabels && <strong style={{ color: headerColor }}>{field.title}:</strong>} {item[field.internalName]}
               </p>
             )
           ))}
