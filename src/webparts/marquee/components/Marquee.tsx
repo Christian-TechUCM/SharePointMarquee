@@ -6,7 +6,7 @@ import { SPHttpClient, SPHttpClientResponse } from '@microsoft/sp-http';
 
 export interface IMarqueeState {
   items: any[];
-  fields: string[];
+  fields: any[];
   message: string;
 }
 
@@ -35,7 +35,11 @@ export default class MarqueeComponent extends React.Component<IMarqueeProps, IMa
     this.props.spHttpClient.get(fieldsUrl, SPHttpClient.configurations.v1)
       .then((response: SPHttpClientResponse) => response.json())
       .then((data: any) => {
-        const fields = data.value.map((field: any) => field.Title);
+        const systemFields = ["ID", "ContentType", "Modified", "Created", "Author", "Editor", "Attachments", "ContentTypeId","Title"];
+        const fields = data.value
+          .filter((field: any) => !systemFields.includes(field.InternalName))
+          .map((field: any) => ({ title: field.Title, internalName: field.InternalName }));
+        console.log('Fields:', fields);
         this.setState({ fields });
 
         // Fetch list items
@@ -43,6 +47,7 @@ export default class MarqueeComponent extends React.Component<IMarqueeProps, IMa
           .then((response: SPHttpClientResponse) => response.json())
           .then((data: any) => {
             let items = data.value;
+            console.log('Items:', items);
             if (this.props.randomize) {
               items = this._shuffleArray(items);
             }
@@ -69,9 +74,9 @@ export default class MarqueeComponent extends React.Component<IMarqueeProps, IMa
       </div>,
       ...items.map((item, index) => (
         <div key={index} className={styles.marqueeItem}>
-          {fields.map((field: string, idx) => (
+          {fields.map((field, idx) => (
             <p key={idx}>
-              {showFieldLabels && <strong>{field}:</strong>} {item[field]}
+              {showFieldLabels && <strong>{field.title}:</strong>} {item[field.internalName]}
             </p>
           ))}
         </div>
