@@ -173,7 +173,7 @@ export default class MarqueeWebPart extends BaseClientSideWebPart<IMarqueeWebPar
                   description: 'Enter the RGB value for the custom message color, e.g., #FF5733',
                   value: this.properties.customMessageColor
                 }),
-                PropertyPaneToggle('customMessageBold', { // Add this section
+                PropertyPaneToggle('customMessageBold', { // Add this section this message if for testing
                   label: 'Bold Custom Message',
                   onText: 'Bold',
                   offText: 'Normal'
