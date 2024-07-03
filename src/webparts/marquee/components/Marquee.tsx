@@ -64,7 +64,7 @@ export default class MarqueeComponent extends React.Component<IMarqueeProps, IMa
 
   public render(): React.ReactElement<IMarqueeProps> {
     const { fields, items, message } = this.state;
-    const { showFieldLabels, showCustomMessage, headerColor, customMessageColor, customMessageBold } = this.props;
+    const { showFieldLabels, showCustomMessage, headerColor, customMessageColor, customMessageBold, imageUrl } = this.props;
 
     const customMessageStyle = {
       color: customMessageColor,
@@ -92,6 +92,11 @@ export default class MarqueeComponent extends React.Component<IMarqueeProps, IMa
 
     return (
       <section className={styles.marquee}>
+        {imageUrl && (
+          <div className={styles.welcomeImageContainer}>
+            <img src={imageUrl} alt="Uploaded image" className={styles.welcomeImage} />
+          </div>
+        )}
         <Marquee pauseOnHover={true} delay={2} gradient={true} gradientColor="white" gradientWidth={10}>
           {content}
         </Marquee>

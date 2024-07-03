@@ -10,8 +10,9 @@ export interface IMarqueeProps {
   spHttpClient: SPHttpClient;
   showCustomMessage: boolean;
   headerColor: string;
-  customMessageColor: string; // Add this line
-  customMessageBold: boolean; // Add this line
+  customMessageColor: string;
+  customMessageBold: boolean;
+  imageUrl: string; // Add this line
   isDarkTheme?: boolean;
   environmentMessage?: string;
   hasTeamsContext?: boolean;

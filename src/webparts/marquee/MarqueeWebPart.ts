@@ -24,8 +24,9 @@ export interface IMarqueeWebPartProps {
   showFieldLabels: boolean;
   showCustomMessage: boolean;
   headerColor: string;
-  customMessageColor: string; // Add this line
-  customMessageBold: boolean; // Add this line
+  customMessageColor: string;
+  customMessageBold: boolean;
+  imageUrl: string; // Add this line
 }
 
 export default class MarqueeWebPart extends BaseClientSideWebPart<IMarqueeWebPartProps> {
@@ -50,8 +51,9 @@ export default class MarqueeWebPart extends BaseClientSideWebPart<IMarqueeWebPar
         showFieldLabels: this.properties.showFieldLabels,
         showCustomMessage: this.properties.showCustomMessage,
         headerColor: this.properties.headerColor,
-        customMessageColor: this.properties.customMessageColor, // Add this line
-        customMessageBold: this.properties.customMessageBold // Add this line
+        customMessageColor: this.properties.customMessageColor,
+        customMessageBold: this.properties.customMessageBold,
+        imageUrl: this.properties.imageUrl // Add this line
       }
     );
 
@@ -141,42 +143,49 @@ export default class MarqueeWebPart extends BaseClientSideWebPart<IMarqueeWebPar
                 PropertyPaneTextField('description', {
                   label: strings.DescriptionFieldLabel
                 }),
+                PropertyPaneDropdown('selectedList', {
+                  label: 'Select a list',
+                  options: this._lists
+                }),
                 PropertyPaneToggle('randomize', {
                   label: 'Randomize Order',
                   onText: 'Randomize',
                   offText: 'In Order'
-                }),
-                PropertyPaneTextField('customMessage', {
-                  label: 'Custom Message'
-                }),
-                PropertyPaneDropdown('selectedList', {
-                  label: 'Select a list',
-                  options: this._lists
                 }),
                 PropertyPaneToggle('showFieldLabels', {
                   label: 'Show Field Labels',
                   onText: 'Show',
                   offText: 'Hide'
                 }),
+                
+                PropertyPaneTextField('customMessage', {
+                  label: 'Custom Message'
+                }),
                 PropertyPaneToggle('showCustomMessage', {
                   label: 'Show Custom Message',
                   onText: 'Show',
                   offText: 'Hide'
                 }),
-                PropertyPaneTextField('headerColor', {
-                  label: 'Header Color (RGB)',
-                  description: 'Enter the RGB value for the header color, e.g., #FF5733',
-                  value: this.properties.headerColor
-                }),
-                PropertyPaneTextField('customMessageColor', { // Add this section
-                  label: 'Custom Message Color (RGB)',
-                  description: 'Enter the RGB value for the custom message color, e.g., #FF5733',
-                  value: this.properties.customMessageColor
-                }),
-                PropertyPaneToggle('customMessageBold', { // Add this section this message if for testing
+                
+                PropertyPaneToggle('customMessageBold', { // Add this section
                   label: 'Bold Custom Message',
                   onText: 'Bold',
                   offText: 'Normal'
+                }),
+                PropertyPaneTextField('headerColor', {
+                  label: 'Header Color (HEX)',
+                  description: 'Enter the HEX value for the header color, e.g., #FF5733',
+                  value: this.properties.headerColor
+                }),
+                PropertyPaneTextField('customMessageColor', { // Add this section
+                  label: 'Custom Message Color (HEX)',
+                  description: 'Enter the HEX value for the custom message color, e.g., #FF5733',
+                  value: this.properties.customMessageColor
+                }),
+                PropertyPaneTextField('imageUrl', { // Add this section
+                  label: 'Image URL',
+                  description: 'Enter the URL of the image to display above the marquee',
+                  value: this.properties.imageUrl
                 })
               ]
             }

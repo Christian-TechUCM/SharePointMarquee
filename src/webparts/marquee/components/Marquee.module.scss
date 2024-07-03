@@ -6,7 +6,6 @@
   color: "[theme:bodyText, default: #323130]";
   color: var(--bodyText);
   
-  
   &.teams {
     font-family: $ms-font-family-fallbacks;
   }
@@ -16,9 +15,14 @@
   text-align: center;
 }
 
+.welcomeImageContainer {
+  text-align: center; /* Center the image */
+}
+
 .welcomeImage {
   width: 100%;
   max-width: 420px;
+  margin-bottom: 0; /* Remove the bottom margin */
 }
 
 .links {
