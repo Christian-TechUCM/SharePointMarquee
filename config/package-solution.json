@@ -1,15 +1,15 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
   "solution": {
-    "name": "marquee-client-side-solution",
+    "name": "MarqueeWebPart-solution",
     "id": "11e85620-dfef-47b6-a80c-378f1ac557f2",
-    "version": "1.0.0.0",
+    "version": "1.1.0.0",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": true,
     "isDomainIsolated": false,
     "developer": {
-      "name": "",
-      "websiteUrl": "",
+      "name": "Christian Urbina",
+      "websiteUrl": "https://christianurbina.com/",
       "privacyUrl": "",
       "termsOfUseUrl": "",
       "mpnId": "Undefined-1.19.0"
