@@ -1,5 +1,5 @@
 # SharePoint Marquee
-- ![MarqueeGif](https://github.com/Christian-TechUCM/SharePointMarquee/blob/main/src/webparts/marquee/assets/Marquee.gif?raw=true)
+![MarqueeGif](https://github.com/Christian-TechUCM/SharePointMarquee/blob/main/src/webparts/marquee/assets/Marquee.gif?raw=true)
 ## Summary
 
 Marquee Web Part
@@ -9,11 +9,11 @@ The Marquee Web Part is a customizable component for SharePoint that displays co
 
 Key Features:
 
-*Select and display items from any SharePoint list within the site.
-*Configurable marquee settings including pause on hover, gradient effect, and delay.
-*Option to display a custom message above the marquee content.
-*Customizable styles for header colors, custom message colors, and bold text.
-*File picker integration for selecting and displaying an image from SharePoint above the marquee.
+- Select and display items from any SharePoint list within the site.
+- Configurable marquee settings including pause on hover, gradient effect, and delay.
+- Option to display a custom message above the marquee content.
+- Customizable styles for header colors, custom message colors, and bold text.
+- File picker integration for selecting and displaying an image from SharePoint above the marquee.
 
 - ![alt text](https://github.com/Christian-TechUCM/SharePointMarquee/blob/main/src/webparts/marquee/assets/Edit.png?raw=true)
 
