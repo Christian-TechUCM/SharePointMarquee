@@ -3,7 +3,7 @@
   "solution": {
     "name": "MarqueeWebPart-solution",
     "id": "11e85620-dfef-47b6-a80c-378f1ac557f2",
-    "version": "1.1.0.0",
+    "version": "1.2.0.0",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": true,
     "isDomainIsolated": false,
@@ -30,7 +30,7 @@
         "title": "marquee Feature",
         "description": "The feature that activates elements of the marquee solution.",
         "id": "98e6cf23-fab2-48ec-b0e3-93ef3665773f",
-        "version": "1.0.0.0"
+        "version": "1.2.0.0"
       }
     ]
   },
