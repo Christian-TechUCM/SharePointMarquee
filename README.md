@@ -3,7 +3,8 @@
 ## Summary
 
 Marquee Web Part
-The Marquee Web Part is a customizable component for SharePoint that displays content in a scrolling marquee format. It allows users to select any SharePoint list, fetch items from it, and display the data with configurable options. Users can customize the display with features such as randomizing item order, showing or hiding field labels, and adding a custom message.
+
+- The Marquee Web Part is a customizable component for SharePoint that displays content in a scrolling marquee format. It allows users to select any SharePoint list, fetch items from it, and display the data with configurable options. Users can customize the display with features such as randomizing item order, showing or hiding field labels, and adding a custom message.
 
 ## Features
 
