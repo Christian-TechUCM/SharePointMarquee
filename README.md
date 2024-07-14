@@ -13,6 +13,17 @@ Option to display a custom message above the marquee content.
 Customizable styles for header colors, custom message colors, and bold text.
 File picker integration for selecting and displaying an image from SharePoint above the marquee.
 
+## Features
+
+Description of the extension that expands upon high-level summary above.
+
+This extension illustrates the following concepts:
+
+- ![alt text](https://github.com/Christian-TechUCM/SharePointMarquee/blob/main/src/webparts/marquee/assets/Edit.png?raw=true)
+- topic 2
+- topic 3
+
+
 ## Used SharePoint Framework Version
 
 ![version](https://img.shields.io/badge/version-1.19.0-green.svg)
@@ -21,9 +32,6 @@ File picker integration for selecting and displaying an image from SharePoint ab
 
 - [SharePoint Framework](https://aka.ms/spfx)
 - [Microsoft 365 tenant](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-developer-tenant)
-
-
-
 
 
 ## Disclaimer
@@ -44,12 +52,3 @@ File picker integration for selecting and displaying an image from SharePoint ab
 
 > Include any additional steps as needed.
 
-## Features
-
-Description of the extension that expands upon high-level summary above.
-
-This extension illustrates the following concepts:
-
-- ![alt text](https://github.com/Christian-TechUCM/SharePointMarquee/blob/main/src/webparts/marquee/assets/Edit.png?raw=true)
-- topic 2
-- topic 3
