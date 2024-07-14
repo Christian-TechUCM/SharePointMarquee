@@ -20,7 +20,7 @@ Description of the extension that expands upon high-level summary above.
 This extension illustrates the following concepts:
 
 - ![alt text](https://github.com/Christian-TechUCM/SharePointMarquee/blob/main/src/webparts/marquee/assets/Edit.png?raw=true)
-- topic 2
+- ![MarqueeGif](https://github.com/Christian-TechUCM/SharePointMarquee/blob/main/src/webparts/marquee/assets/Marquee.gif?raw=true)
 - topic 3
 
 
