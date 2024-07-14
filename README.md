@@ -50,6 +50,6 @@ Description of the extension that expands upon high-level summary above.
 
 This extension illustrates the following concepts:
 
-- ![alt text](https://github.com/Christian-TechUCM/Sharepoint-World-Map/blob/main/IMG/Img.png?raw=true)
+- ![alt text](https://github.com/Christian-TechUCM/SharePointMarquee/blob/main/src/webparts/marquee/assets/Edit.png?raw=true)
 - topic 2
 - topic 3
